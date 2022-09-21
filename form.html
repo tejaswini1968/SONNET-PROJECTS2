@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="E:\SONET2020\bootstrap-3.3.7-dist.zip\bootstrap-3.3.7-dist\css\bootstrap.min.css">
+    <script src="\jquery.min.js"></script>
+    <script src="E:\SONET2020\popper.min.js"></script>
+    <script src="E:\SONET2020\bootstrap.min.js"></script>
+    <title>Form</title>
+</head>
+<body>
+    <form style="text-align: center; background-color: #ccff66;">
+        <h2 style="color:#e00c36">Personal Details</h2>
+        <div>
+            <label for="name">Name: </label>
+            <input type="text" name="name" id="name">
+        </div>
+        <br>
+        <div>
+            <label for="password">Password: </label>
+            <input type="password" name="password" id="password">
+        </div>
+        <br>
+        <div>
+            <label for="email">E-mail id: </label>
+            <input type="email" name="email" id="email">
+        </div>
+        <br>
+        <div>
+            <label for="gender">Gender: </label>
+            <input type="radio" name="gender" value="male" id="choice1">
+            <label for="choice1">Male</label> 
+            <input type="radio" name="gender" value="female" id="choice2">
+            <label for="choice2">Female</label> 
+        </div>
+        <br>
+        <div>
+            <label for="contact">Contact#: </label>
+            <input type="text" name="contact">
+        </div>
+        <br>
+        <div>
+            <h2 style="color: #e00c36">Educational Qualification</h2>
+            <label for="degree" id="degree">Degree: </label>
+            <select name="degree" id="degree">
+                <option value="default" selected>--Select Group--</option>
+                <option value="bsc">Bachelor of Sciences</option>
+                <option value="bcom">Bachelor of Commerce</option>
+                <option value="ba">Bachelor of Arts</option>
+                <option value="bba">Bachelor of Business Administration</option>
+                <option value="none">None</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="btech" id="btech">Engineering:</label>
+            <select name="btech" id="btech">
+                <option value="default" selected>--Select Group--</option>
+                <option value="cse">Computer Science and Engineering</option>
+                <option value="ece">Electronics and Communication Engineering</option>
+                <option value="eee">Electrical and Electronic Engineering</option>
+                <option value="ce">Civil Engineering</option>
+                <option value="eie">Electronic and Instrumentation Engineering</option>
+                <option value="me">Mechanical Engineering</option>
+                <option value="che">Chemical Engineering</option>
+                <option value="none">none</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="hobbies" id="hobbies">Hobbies: </label>
+            <input type="checkbox" name="hobby1" value="chess">
+            <label for="hobby1">Playing chess</label>
+            <input type="checkbox" name="hobby2" value="books">
+            <label for="hobby2">Reading Books</label>
+        </div>
+        <br>
+        <div>
+            <h2 style="color: #e00c36">Address</h2>
+            <textarea cols="50" rows="4"></textarea>
+        </div>
+        <br>
+        <div>
+            <label for="file" id="resume">Attch Resume: </label>
+            <input type="file" name="resume" id="resume">
+        </div>
+        <br>
+        <div>
+            <input type="submit" style="background-color:#ff962b; border-radius: 8px; color: #ffffff; font-size: 1cm;">
+        </div>
+    </form>
+</body>
+</html>

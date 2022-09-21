@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student details</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>  
+
+    <script>
+
+        (function(){
+            alert("You can get started now!");
+        }());
+
+        var students = [];
+        var i,j=1;
+
+        function display(){
+
+            student = new Student(
+                document.getElementById("name").value,
+                document.getElementById("rollno").value,
+                document.getElementById("grade").value,
+                document.getElementById("phone").value,
+                document.getElementById("email").value
+                );
+                students.push(student);
+
+            document.write("<table border='2'>")
+            document.write("<tr>");
+            document.write("<td>");
+            document.write("S.No.");
+            document.write("</td>");
+            document.write("<td>");
+            document.write("Name");
+            document.write("</td>");
+            document.write("<td>");
+            document.write("Hallticket No.");
+            document.write("</td>");
+            document.write("<td>");
+            document.write("Grade");
+            document.write("</td>");
+            document.write("<td>");
+            document.write("Contact No.");
+            document.write("</td>");
+            document.write("<td>");
+            document.write("Email ID");
+            document.write("</td>");
+            document.write("</tr>");
+            for(i=0;i<students.length;i++)
+            {
+                document.write("<tr>");
+                document.write("<td>");
+                document.write(i+1);
+                document.write("</td>");
+                document.write("<td>");
+                document.write(students[i].name);
+                document.write("</td>");
+                document.write("<td>");
+                document.write(students[i].rollno);
+                document.write("</td>");
+                document.write("<td>");
+                document.write(students[i].grade);
+                document.write("</td>");
+                document.write("<td>");
+                document.write(students[i].phone);
+                document.write("</td>");
+                document.write("<td>");
+                document.write(students[i].email);
+                document.write("</td>");
+                document.write("</tr>");
+            }
+            document.write("</table>");
+        }
+
+        function clear(){
+            document.getElementById("name").value='';
+            document.getElementById("rollno").value='';
+            document.getElementById("grade").value='';
+            document.getElementById("phone").value='';
+            document.getElementById("email").value='';
+        }
+
+        function Student(name,rollno,grade,phone,email){
+            this.name=name;
+            this.rollno=rollno;
+            this.grade=grade;
+            this.phone=phone;
+            this.email=email;
+        }
+
+        function getItems(){
+            
+            var student = new Student(
+                document.getElementById("name").value,
+                document.getElementById("rollno").value,
+                document.getElementById("grade").value,
+                document.getElementById("phone").value,
+                document.getElementById("email").value
+                );
+                students.push(student);
+                alert("Give the details of another student");
+                clear();
+        }
+
+    </script>
+</head>
+
+<body class="bg-secondary">
+    <div class="container">
+        <div class="row bg-light">
+            <div class="jumbotron bg-dark text-light">
+                <h1>Student details form</h1>
+                <p>Submit the details of required number of students by pressing Submit button. To view the details of students press Details button.</p>
+            </div>
+            <div class="col-sm"></div>
+            <div class="col-sm-8">
+            <form action="" onsubmit="event.preventDefault(); getItems();">
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label" for="name">Name: </label>
+                    <div class="col-sm-9">
+                    <input class="form-control" type="text" id="name">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label" for="rollno">Roll Number: </label>
+                    <div class="col-sm-9">
+                    <input class="form-control" type="text" id="rollno">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label" for="grade">Grade: </label>
+                    <div class="col-sm-9">
+                    <input class="form-control" type="text" id="grade">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label" for="phone">Contact Number: </label>
+                    <div class="col-sm-9">
+                    <input class="form-control" type="text" id="phone">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label" for="email">Email: </label>
+                    <div class="col-sm-9">
+                    <input class="form-control" type="email" id="email">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                <div class="col-sm-6">
+                    <button class="btn btn-success" type="submit">Submit</button> 
+                </div>
+                <div class="col-sm-6">
+                    <button type="button" class="btn btn-primary" id="trigger" onclick="display()">Details</button>
+                </div>
+                </div>
+                <br><br>
+            </form>
+        </div>
+        <div class="col-sm"></div>
+        </div>
+    </div>
+</body>
+</html>
